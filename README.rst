@@ -29,6 +29,7 @@ Basic Example
 Mash is easy to use
 
 ```python
+
 from mash import Shell
 import os
 
@@ -41,15 +42,26 @@ class command(Shell):
 if __name__ == '__main__':
     c = command()
     a.start() # starts a console
+
 ```
 
 an interactive console appears:
 
+- executing a shell command ("date")
 ```
-# > shell date
+# > shell date\n
 dom ago 11 03:01:37 VET 2013
-# > ! date
+```
+
+- "!" is a shortcut to shell commands:
+
+```
+# > ! date\n
 dom ago 11 03:01:39 VET 2013
+```
+
+- auto-complete commands ("q" = "quit")
+```
 # > q
 Goodbye! ...
 ```
