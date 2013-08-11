@@ -28,7 +28,7 @@ Basic Example
 - Shell Class:
 Mash is easy to use
 
-```python
+- creating a sub-class
 
 from mash import Shell
 import os
@@ -43,28 +43,23 @@ if __name__ == '__main__':
     c = command()
     a.start() # starts a console
 
-```
-
 an interactive console appears:
 
 - executing a shell command ("date")
-```
+
 # > shell date\n
 dom ago 11 03:01:37 VET 2013
-```
+
 
 - "!" is a shortcut to shell commands:
 
-```
 # > ! date\n
 dom ago 11 03:01:39 VET 2013
-```
 
 - auto-complete commands ("q" = "quit")
-```
+
 # > q
 Goodbye! ...
-```
 
 Documentation
 -------------
