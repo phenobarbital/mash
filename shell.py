@@ -39,7 +39,10 @@ class Shell(cmd.Cmd):
         """ Constructor """
         cmd.Cmd.__init__(self)
         self.change_prompt(self.prompt)
-                
+    
+    def start(self, intro=None):
+        return self.cmdloop(intro)
+
     def cmdloop(self, intro=None):
         """ command loop """
         try:
@@ -111,7 +114,7 @@ class Shell(cmd.Cmd):
     
     def postloop(self):
         "Hook method executed when cmdloop() is finished"
-        print 'Goodbye ...'
+        print 'Goodbye! ...'
     
     def onecmd(self, s):
         """ override command action """
