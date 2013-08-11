@@ -1,0 +1,5 @@
+include README.rst AUTHORS TODO CHANGES
+include *.txt
+recursive-include docs *.txt
+include MANIFEST.in
+# global-exclude *~
