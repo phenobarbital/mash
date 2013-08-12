@@ -1,4 +1,12 @@
 * Colorful commands
 * Error and debug
-* Logging support
+* mLog: generate logging facility
 * Determinar si un comando solicita argumentos opcionales (¿vía los atributos que pide?)
+* consolidar la idea de Shell, clase para construir comandos interactivos y command-line
+* try ... except, gestion de errores
+
+* -- add sub-commands from do_{functions} with optional arguments
+ ex create -n name -t template
+    delete -n name 
+    
+* generar clase mUtils para funciones de sistema (apt, dselect, dpkg, etc) como wajig

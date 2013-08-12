@@ -54,7 +54,7 @@ class mCommand(object):
         
     def build_arguments(self):
         """
-        generate all arguments from functions with "get_" prefix
+        generate all arguments from functions with "_get_" prefix
         """
         for i in dir(self):
             func = getattr(self, i)
@@ -62,6 +62,7 @@ class mCommand(object):
             if i.startswith('_get_'):
                 # function return a string, validate with function
                 name = func.__name__.replace('_get_', '')
+                print name
                 if func.__doc__ is not None:
                     h = func.__doc__.strip(' \t\n\r')
                 arg = '--'+name
