@@ -1,5 +1,6 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-from shell import *
+from mshell import *
 from termcolor import *
+from mcommand import *

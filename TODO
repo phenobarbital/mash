@@ -1,3 +1,4 @@
 * Colorful commands
 * Error and debug
 * Logging support
+* Determinar si un comando solicita argumentos opcionales (¿vía los atributos que pide?)

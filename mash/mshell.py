@@ -27,10 +27,14 @@ import sys
 YES = set(['yes','y', 'YES', 'Y'])
 NO = set(['no','n', 'NO', 'N'])
 
-class Shell(cmd.Cmd):
+class mShell(cmd.Cmd):
+    '''Mandarina: Basic and simple interactive shell
+    
+    Arguments:
+    prompt   default command-prompt symbol
+    intro    default message in console mode
     '''
-    Basic and simple interactive shell
-    '''
+
     ruler = '-'
     prompt = '#'
     intro = 'Simple Shell interactive'
