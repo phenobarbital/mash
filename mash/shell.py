@@ -19,6 +19,7 @@
 @summary: Class for building command-line programs
 Created on 10/08/2013
 @author: Jesus Lara <jesuslarag at gmail.com>
+@license: LGPL3
 '''
 
 from mshell import mShell

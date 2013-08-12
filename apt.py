@@ -1,3 +1,12 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+# Copyright 2013 Jesus Lara. All rights reserved.
+'''
+@summary: Class for building command-line programs
+Created on 10/08/2013
+@author: Jesus Lara <jesuslarag at gmail.com>
+@license: LGPL3
+'''
 
 from mash import Shell
 import subprocess
