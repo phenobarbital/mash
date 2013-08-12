@@ -10,3 +10,4 @@
     delete -n name 
     
 * generar clase mUtils para funciones de sistema (apt, dselect, dpkg, etc) como wajig
+* Create a simple server: permite interactuar con los comandos

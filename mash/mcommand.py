@@ -42,7 +42,6 @@ class mCommand(object):
         Constructor
         '''
         self.parser = argparse.ArgumentParser(description = self.intro, conflict_handler='resolve')
-        self.subparser = self.parser.add_subparsers(title='Available Commands')
         self.build_arguments()
         self.default_arguments()
         # build commands
@@ -111,10 +110,12 @@ class mCommand(object):
     def build_commands(self):
         notparse = ['do_EOF', 'do_exit', 'do_quit', 'do_help']
         commands = [ (i[3:], getattr(self, i)) for i in dir(self) if (i.startswith('do_') and not (i in notparse)) ]
-        for name, func in commands:
-            h = ''
-            if func.__doc__ is not None:
-                h = func.__doc__
-            a = self.subparser.add_parser(name, help=h)
-            a.add_argument('value', nargs='?')
-            a.set_defaults(func='do_'+name)
+        if len(commands):
+            self.subparser = self.parser.add_subparsers(title='Available Commands')
+            for name, func in commands:
+                h = ''
+                if func.__doc__ is not None:
+                    h = func.__doc__
+                a = self.subparser.add_parser(name, help=h)
+                a.add_argument('value', nargs='?')
+                a.set_defaults(func='do_'+name)

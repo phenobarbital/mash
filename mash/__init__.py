@@ -4,3 +4,4 @@
 from mshell import *
 from termcolor import *
 from mcommand import *
+from shell import *
